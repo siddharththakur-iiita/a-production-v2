@@ -11,6 +11,8 @@ import Women from "./pages/Women";
 import Men from "./pages/Men";
 import Kid from "./pages/Kid";
 import CustomTailoring from "./pages/CustomTailoring";
+import Search from "./pages/Search";
+import NotFound from "./pages/NotFound";
 export default function App() {
   return (
     <>
@@ -27,6 +29,11 @@ export default function App() {
           path="/kids"
           element={<Kid />}
         />
+        <Route
+          path="/search"
+          element={<Search />}
+        />
+
         <Route
           path="/custom-tailoring"
           element={<CustomTailoring />}
@@ -47,13 +54,17 @@ export default function App() {
           element={<Contact />}
         />
         <Route path="/about" element={<About />} />
-        
+
         <Route
           path="/product/:id"
           element={<ProductDetails />}
         />
         <Route path="/custom-design" element={<CustomDesign />} />
 
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
       </Routes>
 
       <WhatsAppButton />

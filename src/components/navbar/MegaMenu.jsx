@@ -45,9 +45,9 @@ function MegaMenu({ data, onNavigate }) {
     >
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
         <div className="overflow-hidden rounded-b-2xl border border-black/5 bg-white/95 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.25)] backdrop-blur-xl">
-          <div className="grid grid-cols-12 gap-0">
+          <div className="mx-auto max-w-7xl grid grid-cols-12 gap-10 px-10 py-10">
             {/* Column 1 — Categories */}
-            <div className="col-span-4 border-r border-black/5 px-10 py-10">
+            <div className="col-span-4 border-r border-black/5 pr-10">
               <div className="mb-6 flex items-center gap-2">
                 {Icon ? (
                   <Icon className="h-4 w-4 text-amber-600" strokeWidth={1.5} />
@@ -84,7 +84,7 @@ function MegaMenu({ data, onNavigate }) {
             </div>
 
             {/* Column 2 — Featured Collections */}
-            <div className="col-span-4 border-r border-black/5 px-10 py-10">
+            <div className="col-span-4 border-r border-black/5 pr-8">
               <span className="mb-6 block text-[11px] uppercase tracking-[0.28em] text-neutral-400">
                 Featured
               </span>

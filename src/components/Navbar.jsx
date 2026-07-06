@@ -33,11 +33,10 @@ const ActionIcon = memo(function ActionIcon({
     <Link
       to={to}
       aria-label={label}
-      className={`group relative rounded-full p-2 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 ${
-        scrolled
-          ? "text-neutral-800 hover:text-amber-700"
-          : "text-white hover:text-amber-200"
-      }`}
+      className={`group relative rounded-full p-2 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 ${scrolled
+        ? "text-neutral-800 hover:text-amber-700"
+        : "text-white hover:text-amber-200"
+        }`}
     >
       <Icon className="h-5 w-5" strokeWidth={1.5} />
     </Link>
@@ -123,19 +122,17 @@ function Navbar() {
         ref={navRef}
         initial={false}
         onMouseLeave={scheduleClose}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          solid
-            ? "border-b border-black/5 bg-white/80 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)] backdrop-blur-xl"
-            : "bg-transparent"
-        }`}
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${solid
+          ? "border-b border-black/5 bg-white/80 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.15)] backdrop-blur-xl"
+          : "bg-transparent"
+          }`}
       >
         <div className="mx-auto flex h-[88px] max-w-[1400px] items-center justify-between px-6 lg:px-10">
           {/* Logo */}
           <Link
             to="/"
-            className={`font-serif text-xl tracking-[0.22em] transition-colors duration-300 ${
-              solid ? "text-neutral-900" : "text-white"
-            }`}
+            className={`font-serif text-xl tracking-[0.22em] transition-colors duration-300 ${solid ? "text-neutral-900" : "text-white"
+              }`}
           >
             A&nbsp;PRODUCTIONS
           </Link>
@@ -158,25 +155,22 @@ function Navbar() {
                     to={link.to}
                     aria-haspopup={link.hasMega ? "true" : undefined}
                     aria-expanded={link.hasMega ? isActive : undefined}
-                    className={`group relative flex items-center gap-1 py-2 text-[13px] uppercase tracking-[0.18em] transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 ${
-                      solid
-                        ? "text-neutral-700 hover:text-neutral-950"
-                        : "text-white/90 hover:text-white"
-                    }`}
+                    className={`group relative flex items-center gap-1 py-2 text-[13px] uppercase tracking-[0.18em] transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 ${solid
+                      ? "text-neutral-700 hover:text-neutral-950"
+                      : "text-white/90 hover:text-white"
+                      }`}
                   >
                     {link.label}
                     {link.hasMega ? (
                       <ChevronDown
-                        className={`h-3.5 w-3.5 transition-transform duration-300 ${
-                          isActive ? "rotate-180" : ""
-                        }`}
+                        className={`h-3.5 w-3.5 transition-transform duration-300 ${isActive ? "rotate-180" : ""
+                          }`}
                         strokeWidth={1.5}
                       />
                     ) : null}
                     <span
-                      className={`absolute -bottom-0.5 left-0 h-px bg-amber-500 transition-all duration-300 ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
+                      className={`absolute -bottom-0.5 left-0 h-px bg-amber-500 transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
                     />
                   </Link>
                 </div>
@@ -186,18 +180,16 @@ function Navbar() {
 
           {/* Right actions */}
           <div className="flex items-center gap-1 lg:gap-2">
-            <button
-              type="button"
+            <Link
+              to="/search"
               aria-label="Search"
-              data-command-palette="true"
-              className={`group hidden rounded-full p-2 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 sm:block ${
-                solid
+              className={`group hidden rounded-full p-2 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/60 sm:block ${solid
                   ? "text-neutral-800 hover:text-amber-700"
                   : "text-white hover:text-amber-200"
-              }`}
+                }`}
             >
               <Search className="h-5 w-5" strokeWidth={1.5} />
-            </button>
+            </Link>
 
             <div className="hidden sm:block">
               <ActionIcon to="/wishlist" label="Wishlist" icon={Heart} scrolled={solid} />
@@ -208,10 +200,11 @@ function Navbar() {
             </div>
 
             <Link
-              to="/tailoring/consultation"
+              to="/custom-tailoring"
               className="ml-2 hidden items-center rounded-full bg-gradient-to-r from-amber-500 to-amber-600 px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.2em] text-white shadow-lg shadow-amber-600/20 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/40 hover:brightness-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 lg:inline-flex"
             >
               Book Consultation
+
             </Link>
 
             {/* Mobile toggle */}
@@ -220,9 +213,8 @@ function Navbar() {
               onClick={toggleMobile}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
-              className={`ml-1 rounded-full p-2 transition-colors duration-300 lg:hidden ${
-                solid ? "text-neutral-900" : "text-white"
-              }`}
+              className={`ml-1 rounded-full p-2 transition-colors duration-300 lg:hidden ${solid ? "text-neutral-900" : "text-white"
+                }`}
             >
               {mobileOpen ? (
                 <X className="h-6 w-6" strokeWidth={1.5} />

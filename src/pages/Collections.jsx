@@ -260,7 +260,7 @@ const Collections = () => {
               variants={fadeInUp}
             >
               <Link 
-                to="/bespoke"
+                to="/custom-tailoring"
                 className="inline-block px-10 py-5 bg-[#FCFBF9] text-[#111111] text-sm uppercase tracking-widest hover:bg-[#e5e4e1] transition-colors duration-500 rounded-full"
               >
                 Book Consultation
@@ -313,7 +313,7 @@ const Collections = () => {
                 </Link>
               </motion.div>
               <motion.div variants={fadeInUp} className="w-full md:w-auto">
-                <Link to="/bespoke" className="flex items-center justify-center w-full md:w-auto px-10 py-5 bg-[#111111] border border-[#111111] text-[#FCFBF9] text-sm uppercase tracking-widest rounded-full hover:bg-[#333333] hover:border-[#333333] transition-all duration-500 shadow-lg shadow-black/10">
+                <Link to="/custom-tailoring" className="flex items-center justify-center w-full md:w-auto px-10 py-5 bg-[#111111] border border-[#111111] text-[#FCFBF9] text-sm uppercase tracking-widest rounded-full hover:bg-[#333333] hover:border-[#333333] transition-all duration-500 shadow-lg shadow-black/10">
                   Book Consultation
                 </Link>
               </motion.div>
